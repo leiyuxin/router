@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { HomeComponent } from "./home/home.component";
+import { StockComponent } from "./stock/stock.component";
+import { Code404Component } from "./code404/code404.component";
+//不要使用/ 开头
 const routes: Routes = [
   {
-    path: '',
-    children: []
+    path: '',component:HomeComponent
+  
+  },
+  {
+    path:'stock',component:StockComponent
+  },
+  {path:'**',component:Code404Component
+
   }
 ];
 

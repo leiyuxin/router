@@ -17,5 +17,7 @@
     <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
   </li>
 </ul>
-
+<a [routerLink]="['/']">主页</a>
+<a [routerLink]="['/stock']">股票详情</a>
+<input type="button" value="股票详情" (click)="toStockDetail()">
 <router-outlet></router-outlet>

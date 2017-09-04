@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'app';
   route_link = '';
   route_text = 'test';
-  param = { test: 434, dsds: 43, dsf: 42};
+  param = { test: 434, dsds: 43, id: 42};
   // tslint:disable-next-line:one-line
   constructor(private router: Router){
 

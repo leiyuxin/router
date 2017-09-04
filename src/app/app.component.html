@@ -18,6 +18,6 @@
   </li>
 </ul>
 <a [routerLink]="['/']">主页</a>
-<a [routerLink]="['/stock']">股票详情</a>
+<a [routerLink]="['/stock']" [queryParams]="param">股票详情</a>
 <input type="button" value="股票详情" (click)="toStockDetail()">
 <router-outlet></router-outlet>

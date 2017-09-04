@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { StockComponent } from './stock/stock.component';
 import { Code404Component } from './code404/code404.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     StockComponent,
-    Code404Component
+    Code404Component,
+    TestComponent
   ],
   imports: [
     BrowserModule,

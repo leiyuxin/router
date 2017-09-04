@@ -11,7 +11,7 @@ export class StockComponent implements OnInit {
   constructor(private routeInfo: ActivatedRoute) { }
 
   ngOnInit() {
-    this.stockId = this.routeInfo.snapshot.params['id'];
+    this.stockId = this.routeInfo.snapshot.params;
     console.log(this.stockId);
   }
 

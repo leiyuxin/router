@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { StockComponent } from './stock/stock.component';
 import { Code404Component } from './code404/code404.component';
+import { BuylistComponent } from './buylist/buylist.component';
+import { SellerlistComponent } from './sellerlist/sellerlist.component';
 // 不要使用/ 开头
 const routes: Routes = [
   { // 只有当path 为'' 才跳转是full的已有,prefix 前缀 指的是当path vlaue 以xx 开头就可以
@@ -14,7 +16,14 @@ const routes: Routes = [
 
   },
   {// 1.使其能够携带参数
-    path: 'stock/:id', component: StockComponent
+    path: 'stock/:id', component: StockComponent, data: [{isPro: true}],
+    children: [
+      {
+        path: '', component: BuylistComponent
+      }, {
+        path: 'seller/:id', component: SellerlistComponent
+      }
+    ]
   },
   {path: '**', component: Code404Component
 
